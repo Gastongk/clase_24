@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Lista de Productos</h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- Botones para CRUD -->
+                <div class="mb-3">
+                    <button id="btnListar" class="btn btn-primary">Listar Productos</button>
+                    <button id="btnAgregar" class="btn btn-success">Agregar</button>
+                    <button id="btnCargar" class="btn btn-success">Cargar</button>
+                    <button id="btnActualizar" class="btn btn-primary">Actualizar</button>
+                    <button id="btnEliminar" class="btn btn-danger">Eliminar</button>
+                </div>
+
+                <!-- Formulario para agregar/editar producto -->
+                <form id="productForm">
+                    <div class="mb-3">
+                        <label for="id_producto" class="form-label">ID Producto</label>
+                        <input type="text" class="form-control" id="id_producto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="precio" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="cantidad" required>
+                    </div>
+                </form>
+                
+                <!-- Tabla de productos -->
+                <div id="productos">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

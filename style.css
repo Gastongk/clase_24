@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+}
+
+table thead {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #e5e5e5;
+}
+
+#productForm {
+    margin-top: 20px;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#btnConfirmar, #btnCancelar, #btnGuardar {
+    display: none;
+}
+
+.btn-confirmar, #btnCancelar {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-confirmar {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+#btnCancelar {
+    background-color: #e74c3c;
+    color: #fff;
+}
