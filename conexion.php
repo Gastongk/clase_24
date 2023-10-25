@@ -14,7 +14,7 @@ class ConexionDB{
             echo "Error al conectarse: " .$e->getMessage();
         }
     }
-//metodo publico para obtener una sola instancia de conexion
+//metodo para obtener una sola instancia de conexion
     public static function getInstancia(){
         if (self::$instancia === null) {
             self::$instancia = new ConexionDB();

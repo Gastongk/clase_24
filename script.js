@@ -50,7 +50,7 @@ $('#btnAgregar').click(function() {
     $.post('abm.php', { accion: 'agregar', nombre, precio, cantidad }, function(response) {
         if (response === true) {
             alert('Producto guardado exitosamente.');
-            // Limpiar el formulario después de una operación exitosa
+           
             $('#nombre').val('');
             $('#precio').val('');
             $('#cantidad').val('');
@@ -60,18 +60,11 @@ $('#btnAgregar').click(function() {
     });
 });
 
-    // Botón Modificar
-    $('#btnModificar').click(function() {
-        // Aquí puedes implementar la lógica para modificar un producto utilizando AJAX
-        // con el valor ingresado en el campo ID y los demás valores del formulario.
-    });
-
-    // Botón Eliminar (para eliminar un producto)
+    // Botón Eliminar 
     $('#btnEliminar').click(function() {
         const idProducto = $('#id_producto').val();
 
-        // Realiza una solicitud AJAX para eliminar un producto por ID
-        $.ajax({
+         $.ajax({
             url: 'abm.php',
             type: 'POST',
             dataType: 'json',
@@ -123,14 +116,13 @@ $('#btnCargar').click(function() {
     });
 });
 
-// Botón Actualizar (para enviar los datos actualizados)
+// Boton actualizar
 $('#btnActualizar').click(function() {
     const idProducto = $('#id_producto').val();
     const nombre = $('#nombre').val();
     const precio = $('#precio').val();
     const cantidad = $('#cantidad').val();
-
-    // Realiza una solicitud AJAX para actualizar el producto
+  
     $.ajax({
         url: 'abm.php',
         type: 'POST',
@@ -145,7 +137,7 @@ $('#btnActualizar').click(function() {
         success: function(response) {
             if (response.success) {
                 alert('Producto actualizado exitosamente.');
-                // Puedes realizar alguna otra acción aquí, como actualizar la lista de productos.
+                
             } else {
                 alert('Error al actualizar el producto.');
             }
